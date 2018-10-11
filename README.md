@@ -16,12 +16,12 @@ This helps in speeding up the rescue process by
  * rescuing more number of people in a shorter span of time
  * easier access to high altitude safe zones 
  
-2. The ability for users to mark “DONT-GO” zones on the map in the rescue portal, which gets updated in real-time for other users using GPS signals. In case the internet is down, then SMS updates of “DONT-GO” zones are sent .
+2. The ability for users to mark “DONT-GO” zones on the map in the rescue portal, which gets updated in real-time for other users using internet(if available ) or GPS signals. In case the internet is down, then SMS updates of “DONT-GO” zones are sent .
  
 3. We plan on integrating the google road API with the help of which  a user  can snap(pin)  his route of evacuation on the map and share it with the other users to let them know the safe route .
 
-We intend of reducing the usuage of internet as much as possible because of disruption of service during any disaster. As an alternative we look at using GPS signals wherever possible
-
+We intend on reducing the usage of internet as much as possible because of the disruption of service during any disaster. 
+As an alternative we look at using GPS signals wherever possible
 
 
 # Further Enhancements:
