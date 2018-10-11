@@ -9,18 +9,18 @@ Idea submission of Codefundo++ :
 
 # Phase 2 :
 
-In Phase 2 , we look at the measures that can be taken when a disaster strikes , to help people evacuate and minimize the loss of lifes. We are specifically looking at floods while providing the solution through a rescue portal. The features of our portal are as follows:
+In Phase 2 , we look at the measures that can be taken when a disaster strikes , to help people evacuate and minimize the loss of lifes. We are specifically looking at floods while providing the solution through a rescue portal.The user will be able to immediately update his/her live location (in form of pins on map in the portal ) and we maintain a counter for the pins and send help accordingly. The features of our portal are as follows:
 
-1.In the region of affected areas , We(The rescue portal) will   find out the nearby high altitude areas  using google map elevation API and navigate all the people of  nearby affected low lying areas to those safe high altitude areas by SMS communication.
+1. In the region of affected areas , We(The rescue portal) will find out the nearby high altitude areas using google map elevation API and navigate all the people of nearby affected low lying areas to those safe high altitude areas by SMS communication.
 This helps in speeding up the rescue process by
  * rescuing more number of people in a shorter span of time
  * easier access to high altitude safe zones 
  
- 2.The ability for users to mark “DONT-GO” zones on the map in the rescue portal, which gets updated in real-time for other users. In case the internet is down, then SMS updates of “DONT-GO” zones are sent .
+2. The ability for users to mark “DONT-GO” zones on the map in the rescue portal, which gets updated in real-time for other users. In case the internet is down, then SMS updates of “DONT-GO” zones are sent .
  
-3.We plan on integrating the google road API with the help of which  a user  can snap(pin)  his route of evacuation on the map and share it with the other users to let them know the safe route .
+3. We plan on integrating the google road API with the help of which  a user  can snap(pin)  his route of evacuation on the map and share it with the other users to let them know the safe route .
 
-The user will be able to immediately update his/her live location (in form of pins on map ) and we maintain a counter for the pins and send help accordingly
+
 
 # Further Enhancements
 - - - -
