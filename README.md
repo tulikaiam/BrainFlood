@@ -22,8 +22,8 @@ This helps in speeding up the rescue process by
 
 
 
-# Further Enhancements
-- - - -
+# Further Enhancements:
+
 Dashboard to coordinate :
 * Volunteering activity such as food and resource donation, 
 * On ground rescue effort team formation and activity, 
