@@ -21,7 +21,7 @@ This helps in speeding up the rescue process by
 3. We plan on integrating the google road API with the help of which  a user  can snap(pin)  his route of evacuation on the map and share it with the other users to let them know the safe route .
 
 We intend on reducing the usage of internet as much as possible because of the disruption of service during any disaster. 
-As an alternative we look at using GPS signals wherever possible
+As an alternative we look at using GPS signals wherever possible.
 
 
 # Further Enhancements:
