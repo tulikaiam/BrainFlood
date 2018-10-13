@@ -19,6 +19,7 @@ if ($stmt = mysqli_prepare($conn, "INSERT INTO Products (ProductName, Color, Pri
 mysqli_stmt_bind_param($stmt, 'ssd', $product_name, $product_color, $product_price);
 mysqli_stmt_execute($stmt);
 printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
+echo "hello";
 mysqli_stmt_close($stmt);
 }
 
