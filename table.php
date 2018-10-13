@@ -2,7 +2,7 @@
 $host = 'codefundo.mysql.database.azure.com';
 $username = 'codefundo@codefundo';
 $password = 'Microsoft123';
-$db_name = 'brainflood';
+$db_name = 'codefundo';
 
 //Establishes the connection
 $conn = mysqli_init();
