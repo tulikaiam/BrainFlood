@@ -49,6 +49,7 @@
                     name:name,
                     map: map
                 }); 
+                  bindMarkerEvents(marker);
             }
              
             }
