@@ -8,7 +8,8 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 50%;
+        width:50%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -32,7 +33,7 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: {lat: 12.1769, lng: 77.1237 }
+          center: {lat: 13.1769, lng: 77.1237 }
         });
          xhr=new XMLHttpRequest();
         fetchDetails()
@@ -42,7 +43,8 @@
           {
             if(xhr.readyState==4 && xhr.status==200)
             {
-               json=JSON.parse( markers );
+              var res=xhr.responseText;
+               json=JSON.parse(res);
              
             }
         }                   
