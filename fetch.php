@@ -14,5 +14,6 @@ $data = mysqli_query($conn, "SELECT * FROM Maps");
                 $locations[]=array( 'name'=>$key['Name'], 'lat'=>$key['Lat'], 'lng'=>$key['Lon'] );
     }
     /* Convert data to json */
-    $markers = json_encode( $locations );
+    
+    echo json_encode($locations);
     ?>
