@@ -24,7 +24,7 @@ $lng = $point[1];
 
 $res = json_decode(file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$lat.','.$lng.'&key=AIzaSyAqoHgGnauEs3MfqM-42Xd9EZRrl73X2k4&callback=initMap'),true);
 
-$name = $res['results'][1]['formatted_address'];
+$name = $res['results'][0]['formatted_address'];
 echo $name;
 
 if ($stmt = mysqli_prepare($conn, "INSERT INTO Maps (Name,Lat,Lon) VALUES (?, ?, ?)")) {
