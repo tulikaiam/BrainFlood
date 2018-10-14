@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>Accessing Arguments in UI Events</title>
+    <title>Don't Go Zones</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -21,6 +21,7 @@
       }
     </style>
   </head>
+  <h2> These points are the Danger zones</h2>
   <body>
     <div id="map"></div>
     <script>
