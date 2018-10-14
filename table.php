@@ -2,7 +2,7 @@
 $host = 'codefundo.mysql.database.azure.com';
 $username = 'codefundo@codefundo';
 $password = 'Microsoft123';
-$db_name = 'mysql';
+$db_name = 'users';
 
 //Establishes the connection
 $conn = mysqli_init();
@@ -20,9 +20,9 @@ CREATE TABLE Products (
 `Price` DOUBLE NOT NULL ,
 PRIMARY KEY (`Id`)
 );
-')) {
-printf("Table created\n");
-}
+'))
+  
+echo "hello";
 
 //Close the connection
 mysqli_close($conn);
