@@ -102,9 +102,10 @@ var removeMarker = function(marker, markerId) {
     delete markers[markerId];
      // delete marker instance from markers object
     console.log(markerId);
-    markerId.split('_');
+    mark=markerId.split('_');
+  console.log(mark);
     xhr=new XMLHttpRequest();
-        delDetails(markerId[0],markerId[1])
+        delDetails(mark[0],mark[1])
         function delDetails(lat,lng)
         {
           xhr.onreadystatechange=function()
