@@ -18,25 +18,25 @@
     $n= (1 / ((2 * $pi / 360) * $earth)); 
         
     for($i=0;$i<5;$i++){
-          $new_latitude = $latitude + ($i * $m);
+          $new_latitude = $latitude + ($i * $m)/10;
           $new_longitude = $longitude + ($i * $n) / cos($new_latitude * ($pi / 180));
           //console.log(new_latitude,new_longitude)
           array_push($lat_array,$new_latitude);
           array_push($lng_array,$new_longitude);
           
-          $new_latitude = $latitude + ($i * $m);
+          $new_latitude = $latitude + ($i * $m)/10;
           $new_longitude = $longitude - ($i * $n) / cos($new_latitude * ($pi / 180));
           //console.log(new_latitude,new_longitude)
           array_push($lat_array,$new_latitude);
           array_push($lng_array,$new_longitude);
 
-          $new_latitude = $latitude - ($i * $m);
+          $new_latitude = $latitude - ($i * $m)/10;
           $new_longitude = $longitude + ($i * $n) / cos($new_latitude * ($pi / 180));
           //console.log(new_latitude,new_longitude)
           array_push($lat_array,$new_latitude);
           array_push($lng_array,$new_longitude);
 
-          $new_latitude = $latitude - ($i * $m);
+          $new_latitude = $latitude - ($i * $m)/10;
           $new_longitude = $longitude - ($i * $n) / cos($new_latitude * ($pi / 180));
           //console.log(new_latitude,new_longitude)
           array_push($lat_array,$new_latitude);
