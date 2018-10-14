@@ -57,10 +57,11 @@
                     map: map,
                     id: 'marker_' + markerId
                 }); 
-            }
-      markers[markerId] = marker;
+                 markers[markerId] = marker;
    
       bindMarkerEvents(marker); 
+            }
+     
              
             }
         }                   
