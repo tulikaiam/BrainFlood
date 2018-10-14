@@ -115,7 +115,7 @@ var removeMarker = function(marker, markerId) {
              console.log("Done Deleting");
             }
         }                   
-        xhr.open("GET",'delete.php?locations='+lat+','+lng,true);
+        xhr.open("GET",'delete.php?locations='+markerId[0]+','+markerId[1],true);
         xhr.send();    
         }
 
