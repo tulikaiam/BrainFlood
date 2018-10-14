@@ -105,7 +105,7 @@ var removeMarker = function(marker, markerId) {
     mark=markerId.split('_');
   console.log(mark);
     xhr=new XMLHttpRequest();
-        delDetails(mark[0],mark[1])
+        delDetails(parseFloat(mark[0]),parseFloat(mark[1]))
         function delDetails(lat,lng)
         {
           xhr.onreadystatechange=function()
