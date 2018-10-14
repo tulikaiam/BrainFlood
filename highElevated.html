@@ -9,6 +9,7 @@
        * element that contains the map. */
       #map {
         height: 50%;
+        width:50%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -24,7 +25,7 @@
       function initMap() 
       {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
+          zoom:10,
           center: {lat: 13.1769, lng: 77.1237 }
         });
         map.addListener('click', function(e) {
