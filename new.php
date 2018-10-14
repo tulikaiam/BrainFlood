@@ -9,7 +9,7 @@
        * element that contains the map. */
       #map {
         height: 50%;
-        width:50%;
+        width:80%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -44,14 +44,8 @@
             if(xhr.readyState==4 && xhr.status==200)
             {
               var res=xhr.responseText;
-               json=JSON.parse(res);
-             
-            }
-        }                   
-        xhr.open("GET",'fetch.php',true);
-        xhr.send();    
-        }
-       for( var o in json ){
+              json=JSON.parse(res);
+              for( var o in json ){
 
                 lat = json[ o ].lat;
                 lng=json[ o ].lng;
@@ -67,6 +61,13 @@
       markers[markerId] = marker;
    
       bindMarkerEvents(marker); 
+             
+            }
+        }                   
+        xhr.open("GET",'fetch.php',true);
+        xhr.send();    
+        }
+       
         map.addListener('click', function(e) {
           placeMarkerAndPanTo(e.latLng, map);
           getName(map,e.latLng);
