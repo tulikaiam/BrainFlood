@@ -17,7 +17,7 @@
     $lng_array=[];
     $n= (1 / ((2 * $pi / 360) * $earth)); 
         
-    for($i=0;$i<10;$i++){
+    for($i=0;$i<5;$i++){
           $new_latitude = $latitude + ($i * $m)/1000;
           $new_longitude = $longitude + ($i * $n) / cos($new_latitude * ($pi / 180));
           //console.log(new_latitude,new_longitude)
