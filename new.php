@@ -34,7 +34,10 @@
           {
             if(xhr.readyState==4 && xhr.status==200)
             {
-               json=JSON.parse(markers);
+              var res=xhr.responseText;
+             console.log(res); //Key value pairs(Get it as a text)
+           
+               json=JSON.parse(res);
                 for( var i in json ){
 
                 lat = json[i].lat;
