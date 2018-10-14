@@ -4,7 +4,7 @@ $username = 'codefundo@codefundo';
 $password = 'Microsoft123';
 $db_name = 'users';
 extract($_GET);
-$point = explode(',', $locations);
+$point = explode('_', $locations);
 $lat =  $point[0];
 $lng = $point[1];
 //Establishes the connection
