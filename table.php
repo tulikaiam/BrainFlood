@@ -1,6 +1,6 @@
 <?php
 $host = 'brainflood.database.windows.net';
-$username = 'codefundo@brainflood';
+$username = 'codefundo@brainflood.database.windows.net';
 $password = 'Microsoft123';
 $db_name = 'codefundo';
 
