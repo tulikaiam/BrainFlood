@@ -27,25 +27,25 @@
           center: {lat: 12.1769, lng: 77.1237 }
         });
          xhr=new XMLHttpRequest();
-        fetchDetails()
+        fetchDetails();
         function fetchDetails()
         {
           xhr.onreadystatechange=function()
           {
             if(xhr.readyState==4 && xhr.status==200)
             {
-               json=JSON.parse( markers );
+               json=JSON.parse(markers);
              
             }
         }                   
         xhr.open("GET",'fetch.php',true);
         xhr.send();    
         }
-       for( var o in json ){
+       for( var i in json ){
 
-                lat = json[ o ].lat;
-                lng=json[ o ].lng;
-                name=json[ o ].name;
+                lat = json[i].lat;
+                lng=json[i].lng;
+                name=json[i].name;
 
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(lat,lng),
