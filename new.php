@@ -17,6 +17,7 @@ $data = mysqli_query($conn, 'SELECT * FROM Maps');
     /* Convert data to json */
     $markers = json_encode( $locations );
     ?>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Accessing Arguments in UI Events</title>
