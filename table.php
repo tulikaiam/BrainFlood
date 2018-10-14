@@ -1,12 +1,12 @@
 <?php
-$host = 'brainflood.database.windows.net';
-$username = 'codefundo@brainflood.database.windows.net';
+$host = 'codefundo.mysql.database.azure.com';
+$username = 'codefundo@codefundo';
 $password = 'Microsoft123';
-$db_name = 'codefundo';
+$db_name = 'mysql';
 
 //Establishes the connection
 $conn = mysqli_init();
-mysqli_real_connect($conn, $host, $username, $password, $db_name, 1433);
+mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
 if (mysqli_connect_errno($conn)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
