@@ -35,14 +35,14 @@
             if(xhr.readyState==4 && xhr.status==200)
             {
               var res=xhr.responseText;
-             console.log(res); //Key value pairs(Get it as a text)
+          
            
-               json=JSON.parse(res);
-                for( var i in json ){
+             j=JSON.parse(res);
+                for( var i in j){
 
-                lat = json[i].lat;
-                lng=json[i].lng;
-                name=json[i].name;
+                lat = j[i].lat;
+                lng=j[i].lng;
+                name=j[i].name;
 
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(lat,lng),
