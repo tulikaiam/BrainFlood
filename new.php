@@ -35,13 +35,7 @@
             if(xhr.readyState==4 && xhr.status==200)
             {
                json=JSON.parse(markers);
-             
-            }
-        }                   
-        xhr.open("GET",'fetch.php',true);
-        xhr.send();    
-        }
-       for( var i in json ){
+                for( var i in json ){
 
                 lat = json[i].lat;
                 lng=json[i].lng;
@@ -53,6 +47,13 @@
                     map: map
                 }); 
             }
+             
+            }
+        }                   
+        xhr.open("GET",'fetch.php',true);
+        xhr.send();    
+        }
+      
       
         map.addListener('click', function(e) {
           placeMarkerAndPanTo(e.latLng, map);
