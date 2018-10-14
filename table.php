@@ -13,11 +13,11 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 
 // Run the create table query
 if (mysqli_query($conn, '
-CREATE TABLE Products (
+CREATE TABLE Maps (
 `Id` INT NOT NULL AUTO_INCREMENT ,
-`ProductName` VARCHAR(200) NOT NULL ,
-`Color` VARCHAR(50) NOT NULL ,
-`Price` DOUBLE NOT NULL ,
+`Name` VARCHAR(200) NOT NULL ,
+`Lat` DOUBLE NOT NULL ,
+`Lon` DOUBLE NOT NULL ,
 PRIMARY KEY (`Id`)
 );
 '))
