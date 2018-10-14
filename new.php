@@ -145,9 +145,9 @@ var removeMarker = function(marker, markerId) {
     delete markers[markerId];
      // delete marker instance from markers object
     console.log(markerId);
-    markerId.split('_');
+    mark=markerId.split('_');
     xhr=new XMLHttpRequest();
-        delDetails(markerId[0],markerId[1])
+        delDetails(mark[0],mark[1])
         function delDetails(lat,lng)
         {
           xhr.onreadystatechange=function()
@@ -158,7 +158,7 @@ var removeMarker = function(marker, markerId) {
              console.log("Done Deleting");
             }
         }                   
-        xhr.open("GET",'delete.php?locations='+parseFloat(markerId[0])+','+parseFloat(markerId[1]),true);
+        xhr.open("GET",'delete.php?locations='+parseFloat(mark[0])+','+parseFloat(mark[1]),true);
         xhr.send();    
         }
 
