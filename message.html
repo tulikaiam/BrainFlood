@@ -11,7 +11,7 @@
 					var no=document.getElementById("mlead").value;
 
 					this.xhr.onreadystatechange=this.update;
-					this.xhr.open("GET","https://smsapi.engineeringtgr.com/send/?Mobile=9663126670&Password=tulika&Message="+msg+"&To="+no+"&Key=tulikPEUuMjSBrXdnTGbW81eK",true); //true indicates that aysnc reuqet is sent
+					this.xhr.open("GET","http://smsapi.engineeringtgr.com/send/?Mobile=9663126670&Password=tulika&Message="+msg+"&To="+no+"&Key=tulikPEUuMjSBrXdnTGbW81eK",true); //true indicates that aysnc reuqet is sent
 					this.xhr.send();
 				},
 				update:function(){
@@ -28,7 +28,7 @@
 			
 			}
 		
-		</script>
+		</script>//Ninja Mock 
 	</head>
 	<body>
 		Message:<input type="text" id="mname" name="mname"  />
