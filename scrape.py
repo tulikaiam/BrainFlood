@@ -1,4 +1,5 @@
 from twitterscraper import query_tweets
+import datetime as dt
 import json
 from pprint import pprint
 
@@ -6,7 +7,7 @@ team_tags = {"Floods":['flood', 'water', ], "Cyclone": {'Cyclone', 'Orissa'}}
 
 def get_tweets(tag):
 	out = dict()
-	for i, tweet in enumerate(query_tweets(tag, 10000)):
+	for i, tweet in enumerate(query_tweets(tag, 100,begindate=dt.date(2018,6,1), enddate=dt.date.today())):
 		out[i] = {'id':tweet.id, 'like':tweet.likes, 'replies':tweet.replies, 'retweets': tweet.retweets, 'text':tweet.text, 'timestamp':str(tweet.timestamp), 'user':tweet.user}
 	pprint(out)
 	with open("json/"+tag.strip('#')+".json", 'w') as f:
@@ -38,7 +39,7 @@ def dump(tweets):
 
 
 if __name__ == '__main__':
-	tag_list = ["#kerala","#flood" ,"#floods","#cyclone","#help","#floodrelief","#floodwarning","#earthquake"]
+	tag_list = ["#flood" ,"#floods","#cyclone","#help","#floodrelief","#floodwarning","#earthquake"]
 	for t in tag_list:
 		get_tweets(t)
 		parsed = parse(t)
