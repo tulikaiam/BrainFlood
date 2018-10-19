@@ -13,7 +13,7 @@
 					var no=document.getElementById("mlead").value;
 
 					this.xhr.onreadystatechange=this.update;
-					this.xhr.open("GET","message.php?data="+msg+','+no,true); //true indicates that aysnc reuqet is sent
+					this.xhr.open("GET","message.php?data="+msg+'_'+no,true); //true indicates that aysnc reuqet is sent
 					this.xhr.send();
 				},
 				update:function(){
