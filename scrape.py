@@ -1,13 +1,14 @@
 from twitterscraper import query_tweets
-import datetime as dt
 import json
 from pprint import pprint
+import datetime as dt
+import detectflood
 
 team_tags = {"Floods":['flood', 'water', ], "Cyclone": {'Cyclone', 'Orissa'}}
 
 def get_tweets(tag):
 	out = dict()
-	for i, tweet in enumerate(query_tweets(tag, 100,begindate=dt.date(2018,6,1), enddate=dt.date.today())):
+	for i, tweet in enumerate(query_tweets(tag, 10,begindate=dt.date(2018,8,20), enddate=dt.date.today())):
 		out[i] = {'id':tweet.id, 'like':tweet.likes, 'replies':tweet.replies, 'retweets': tweet.retweets, 'text':tweet.text, 'timestamp':str(tweet.timestamp), 'user':tweet.user}
 	pprint(out)
 	with open("json/"+tag.strip('#')+".json", 'w') as f:
@@ -22,7 +23,9 @@ def parse(tag):
 def imp_tweets(parsed):
 	imp = list()
 	for tweet in parsed.values():
-		if(int(tweet['like']) > 20 or int(tweet['retweets']) > 10):
+
+		
+		if(detectflood.analysetweet(tweet)):
 			imp.append(tweet)
 	return imp
 	
@@ -39,7 +42,7 @@ def dump(tweets):
 
 
 if __name__ == '__main__':
-	tag_list = ["#flood" ,"#floods","#cyclone","#help","#floodrelief","#floodwarning","#earthquake"]
+	tag_list = ["#flood","#floods"]
 	for t in tag_list:
 		get_tweets(t)
 		parsed = parse(t)
