@@ -97,8 +97,8 @@
 
       var new_marker = new google.maps.Marker({
       position: myLatlng,
-      map : map,
-      title: "the elevation at this point is "+elevation
+      map : map
+      //title: "the elevation at this point is "+elevation
       });
       var infowindow = new google.maps.InfoWindow({
           content: 'Here, find high elevated region of '+elevation.toFixed(3)+' metres'
