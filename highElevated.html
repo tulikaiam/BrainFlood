@@ -31,7 +31,7 @@
         //document.addEventListener('touchstart', handler, {passive: true});
         map.addListener('click', function(e) {
           placeMarkerAndPanTo(e.latLng, map);
-          
+          console.log("testing123! ");
           getElevation(map,e.latLng);
         });
       }
@@ -83,6 +83,7 @@
               lng = res[2]
               placeMarker(map,lat,lng,elevation);
               //set window content
+         
               
             }
         }                   
@@ -100,6 +101,7 @@
       map : map,
         title: "the elevation at this point is "+elevation
       });
+      console.log("testing! ");
       var infowindow = new google.maps.InfoWindow({
           content: 'Here, find high elevated region of '+elevation.toFixed(3)+' metres'
         });
