@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Elevation</title>
+    <title>Accessing Arguments in UI Events</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        top :70px;
-        left: 100px;
-        height: 50%;
-        width:50%;
+        height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -21,16 +18,17 @@
       }
     </style>
   </head>
-  <h1 align="center"> Point your location </h1>
   <body>
     <div id="map"></div>
     <script>
       function initMap() 
       {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom:10,
+          zoom: 15,
           center: {lat: 13.1769, lng: 77.1237 }
         });
+        
+
         map.addListener('click', function(e) {
           placeMarkerAndPanTo(e.latLng, map);
           
@@ -48,6 +46,8 @@
       function placeMarkerAndPanTo(latLng, map) {
         
         var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
+
         var markerId = getMarkerUniqueId(latLng.lat(), latLng.lng());
         var marker = new google.maps.Marker({
           
@@ -81,7 +81,9 @@
               elevation = res[0]
               lat = res[1]
               lng = res[2]
-              placeMarker(map,lat,lng,elevation)
+              placeMarker(map,lat,lng,elevation);
+              //set window content
+              
             }
         }                   
         xhr.open("GET",'cors.php?locations='+lat+','+lng,true);
@@ -95,14 +97,15 @@
 
       var new_marker = new google.maps.Marker({
       position: myLatlng,
-      map : map
-      //title: "the elevation at this point is "+elevation+" metres"
+      map : map,
+      title: "the elevation at this point is "+elevation
       });
       var infowindow = new google.maps.InfoWindow({
           content: 'Here, find high elevated region of '+elevation.toFixed(3)+' metres'
         });
       infowindow.open(map, new_marker);
-      
+      //map.setCenter(pos);
+
       // To add the marker to the map, call setMap();
       //new_marker.setMap(map);
     }
