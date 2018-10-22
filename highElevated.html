@@ -8,8 +8,12 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 50%;
-        width: 50%;
+         margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+        height: 70%;
+        width: 70%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -32,7 +36,7 @@
         //document.addEventListener('touchstart', handler, {passive: true});
         map.addListener('click', function(e) {
           placeMarkerAndPanTo(e.latLng, map);
-          console.log("testing123! ");
+          //console.log("testing123! ");
           getElevation(map,e.latLng);
         });
       }
