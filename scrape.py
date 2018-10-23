@@ -2,18 +2,22 @@ from twitterscraper import query_tweets
 import json
 from pprint import pprint
 import datetime as dt
+from flask import Flask
+from flask import request, render_template
+app=Flask(__name__)
+
 import detectflood
 
 team_tags = {"Floods":['flood', 'water', ], "Cyclone": {'Cyclone', 'Orissa'}}
 
 def get_tweets(tag):
 	out = dict()
-	for i, tweet in enumerate(query_tweets(tag, 10,begindate=dt.date(2018,8,20), enddate=dt.date.today())):
+	for i, tweet in enumerate(query_tweets(tag, 10,begindate=dt.date.today() - dt.timedelta(1), enddate=dt.date.today())):
 		out[i] = {'id':tweet.id, 'like':tweet.likes, 'replies':tweet.replies, 'retweets': tweet.retweets, 'text':tweet.text, 'timestamp':str(tweet.timestamp), 'user':tweet.user}
 	pprint(out)
 	with open("json/"+tag.strip('#')+".json", 'w') as f:
 		json.dump(out, f, indent = 4)
-		
+	return 'ok'
 def parse(tag):
 	parsed = dict()
 	with open("json/"+tag.strip('#')+".json", "r") as f:
@@ -32,6 +36,7 @@ def imp_tweets(parsed):
 def dump(tweets):
 	with open("imp/"+list(tweets.keys())[0]+".json", 'w+') as f:
 		json.dump(tweets, f, indent = 4)
+	return 'ok'
 
 #def score(file_name):
 #	imp_tweet_list = list()
@@ -41,14 +46,19 @@ def dump(tweets):
 	
 
 
-if __name__ == '__main__':
-	tag_list = ["#flood","#floods"]
+#if __name__ == '__main__':
+@app.route('/')
+def hello():
+	tag_list = ["#floods"]
 	for t in tag_list:
-		get_tweets(t)
+		ok=get_tweets(t)
 		parsed = parse(t)
 		imp_tweet_list = {t: imp_tweets(parsed)}
-		dump(imp_tweet_list)
+		print(imp_tweet_list)
+		o=dump(imp_tweet_list)
+	return render_template('flood.html',output=imp_tweet_list["#floods"])
 	
+
 	#score_dict = score('#IPL.json') 
 	#count = dict()
 	#for tweet in imp_tweet_list:
