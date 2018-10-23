@@ -19,10 +19,20 @@
         margin: 0;
         padding: 0;
       }
+      #text{
+        right:50px;
+        top:50px;
+      }
+      #help{
+        right:50px;
+        top:150px;
+      }
     </style>
   </head>
   <h2> These points are the Danger zones</h2>
   <body>
+    <div id="text">MARK the zones that you know are not accessible</div>
+    <div id="help">HELP other people</div>
     <div id="map"></div>
     <script>
 
