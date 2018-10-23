@@ -23,8 +23,10 @@
       }
       div.c {
     text-align: right;
+     margin-top: 100px;
 } 
   div.a {
+
     text-align: center;
 } 
 
@@ -59,7 +61,7 @@
         var id ;
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom:11,
+          zoom:9,
           center: {lat: 13.1769, lng: 77.1237 }
         });
          xhr=new XMLHttpRequest();
