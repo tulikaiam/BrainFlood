@@ -1,0 +1,2 @@
+The dataset consists of two files - flood_train.csv : used to train the model
+                                  - flood_test.csv : the unseen data that the model tries to predict the occurence of floods
