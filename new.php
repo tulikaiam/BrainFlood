@@ -15,11 +15,11 @@
       }
       #text{
         left:1200px;
-        top:1200px;
+        top:50px;
       }
       #help{
         left:1200px;
-        top:1700px;
+        top:70px;
       }
       div.c {
     text-align: right;
@@ -59,7 +59,7 @@
         var id ;
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom:7,
+          zoom:11,
           center: {lat: 13.1769, lng: 77.1237 }
         });
          xhr=new XMLHttpRequest();
