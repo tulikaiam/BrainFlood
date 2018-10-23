@@ -13,29 +13,40 @@
         height: 80%;
         width:80%;
       }
+      #text{
+        left:1200px;
+        top:500px;
+      }
+      #help{
+        left:1200px;
+        top:700px;
+      }
+      div.c {
+    text-align: right;
+} 
+  div.a {
+    text-align: center;
+} 
+
+
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
-      #text{
-        left:200px;
-        top:100px;
-      }
-      #help{
-        left:200px;
-        top:200px;
-      }
+      
       * {
    font-family: myFirstFont;
 }
     </style>
   </head>
-  <h2> These points are the Danger zones</h2>
+  <div class="a">
+  <h2 > These points are the Danger zones</h2>
+</div>
   <body>
-    <div id="text"><b>MARK the zones that you know are not accessible</b></div>
-    <div id="help"><b>HELP other people</b></div>
+    <div class="c" id="text"><b>MARK the zones that you know are not accessible</b></div>
+    <div class ="c"id="help"><b>HELP other people</b></div>
     <div id="map"></div>
     <script>
 
