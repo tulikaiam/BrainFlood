@@ -7,9 +7,7 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-       body {
-    background-color: #F5F5C7;
-}
+ 
       #map {
          position: fixed;
         top:60px;
@@ -20,22 +18,26 @@
       #text{
          position: fixed;
         left:1000px;
-        top:100px;
+        top:210px;
       }
       #help{
          position: fixed;
         left:1000px;
-        top:130px;
+        top:240px;
+      }
+      #he{
+        position: fixed;
+        left:500px;
       }
       #ac{
          position: fixed;
         left:1000px;
-        top:50px;
+        top:150px;
       }
       #del{
          position: fixed;
         left:1000px;
-        top:70px;
+        top:180px;
       }
        div.a {
     text-align: center;
@@ -62,15 +64,15 @@
 }
     </style>
   </head>
-  <div class="a" >
+  <div id="he" >
   <h2 > These points are the Danger zones</h2>
 </div>
-  <body>
-    <div class="c" id="ac"><b><li>The zones that are marked are not accessible</li></b></div>
+  <body background="fl.jpg">
+    <div class="c" id="ac"><font face="verdana" size="4" color=#FFFFFF><b><li>The zones that are marked are not accessible</li></b></font></div>
     
-    <div class="c" id="del"><b><li>The zones can be deleted with a right click</li></b></div>
-    <div class="c" id="text"><b><li>MARK the zones that you know are not accessible</li></b></div>
-    <div class ="c"id="help"><b><li>HELP other people</li></b></div>
+    <div class="c" id="del"><font face="verdana" size="4" color=#FFFFFF ><b><li>The zones can be deleted with a right click</li></b></font></div>
+    <div class="c" id="text"><font face="verdana" size ="4" color=#FFFFFF><b><li>MARK the zones that you know are not accessible</li></b></font></div>
+    <div class ="c"id="help"><font face="verdana" size="4" color=#FFFFFF><b><li>HELP other people</li></b></font></div>
     <div id="map"></div>
     <script>
 
