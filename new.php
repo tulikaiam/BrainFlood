@@ -7,29 +7,47 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+       body {
+    background-color: #F5F5C7;
+}
       #map {
-        top:50px;
+         position: fixed;
+        top:60px;
         left:50px;
         height: 90%;
         width:60%;
       }
       #text{
-        left:1200px;
-        top:50px;
+         position: fixed;
+        left:1000px;
+        top:100px;
       }
       #help{
-        left:1200px;
+         position: fixed;
+        left:1000px;
+        top:130px;
+      }
+      #ac{
+         position: fixed;
+        left:1000px;
+        top:50px;
+      }
+      #del{
+         position: fixed;
+        left:1000px;
         top:70px;
       }
-      div.c {
-    text-align: right;
-     margin-top: 100px;
-} 
-  div.a {
-
+       div.a {
     text-align: center;
+     position: fixed;
+
 } 
 
+      div.c {
+         position: fixed;
+  
+} 
+ 
 
 
       /* Optional: Makes the sample page fill the window. */
@@ -44,12 +62,15 @@
 }
     </style>
   </head>
-  <div >
+  <div class="a" >
   <h2 > These points are the Danger zones</h2>
 </div>
   <body>
-    <div class="c" id="text"><b>MARK the zones that you know are not accessible</b></div>
-    <div class ="c"id="help"><b>HELP other people</b></div>
+    <div class="c" id="ac"><b><li>The zones that are marked are not accessible</li></b></div>
+    
+    <div class="c" id="del"><b><li>The zones can be deleted with a right click</li></b></div>
+    <div class="c" id="text"><b><li>MARK the zones that you know are not accessible</li></b></div>
+    <div class ="c"id="help"><b><li>HELP other people</li></b></div>
     <div id="map"></div>
     <script>
 
