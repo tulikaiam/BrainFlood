@@ -10,16 +10,16 @@
       #map {
         top:50px;
         left:50px;
-        height: 80%;
-        width:80%;
+        height: 90%;
+        width:60%;
       }
       #text{
         left:1200px;
-        top:500px;
+        top:1200px;
       }
       #help{
         left:1200px;
-        top:700px;
+        top:1700px;
       }
       div.c {
     text-align: right;
@@ -59,7 +59,7 @@
         var id ;
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
+          zoom:7,
           center: {lat: 13.1769, lng: 77.1237 }
         });
          xhr=new XMLHttpRequest();
