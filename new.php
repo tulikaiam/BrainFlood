@@ -31,6 +31,7 @@
 } 
 
 
+
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
@@ -43,7 +44,7 @@
 }
     </style>
   </head>
-  <div class="a">
+  <div >
   <h2 > These points are the Danger zones</h2>
 </div>
   <body>
