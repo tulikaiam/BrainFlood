@@ -20,19 +20,22 @@
         padding: 0;
       }
       #text{
-        right:50px;
-        top:50px;
+        left:200px;
+        top:100px;
       }
       #help{
-        right:50px;
-        top:150px;
+        left:200px;
+        top:200px;
       }
+      * {
+   font-family: myFirstFont;
+}
     </style>
   </head>
   <h2> These points are the Danger zones</h2>
   <body>
-    <div id="text">MARK the zones that you know are not accessible</div>
-    <div id="help">HELP other people</div>
+    <div id="text"><b>MARK the zones that you know are not accessible</b></div>
+    <div id="help"><b>HELP other people</b></div>
     <div id="map"></div>
     <script>
 
