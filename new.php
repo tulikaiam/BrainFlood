@@ -18,12 +18,12 @@
       #text{
          position: fixed;
         left:1000px;
-        top:210px;
+        top:240px;
       }
       #help{
          position: fixed;
         left:1000px;
-        top:240px;
+        top:280px;
       }
       #he{
         position: fixed;
@@ -37,7 +37,7 @@
       #del{
          position: fixed;
         left:1000px;
-        top:180px;
+        top:200px;
       }
        div.a {
     text-align: center;
