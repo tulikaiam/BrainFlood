@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>BrainFlood: Predicting Flood</title>
+	  <style>
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	   </style>
+      <script type="text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+			   var random = Math.random(); 
+			   var flood = document.getElementById("flood");
+			   if(random > 0.7)
+			   {
+					flood.innerHTML = "Flood Occurrence in your region high :(";
+			   }
+			   else
+			   {
+					flood.innerHTML = "Flood Occurrence in your region low :)";
+			   }
+            }
+      </script>
+   </head>
+   <body onload="AutoRefresh(5000);" background="water.jpg">
+		<h1 align="center">Flood Forecast for your Region</h1>
+		<img src="waterLevel.jpg" class="center">
+		<h2 id="flood" align="center"></h2>
+   </body>  
+</html>
