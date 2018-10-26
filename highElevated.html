@@ -82,13 +82,22 @@
           center: {lat: 13.1769, lng: 77.1237 }
         });
         //getting location and setting it as centre of map
-        navigator.geolocation.getCurrentPosition(function(position){
-            var pos={
-              lat : position.coords.latitude,
-              lng : position.coords.longitude
-            };
-            map.setCenter(pos); 
-          })
+           if (navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(function(position) {
+	      var pos = {
+		lat: position.coords.latitude,
+		lng: position.coords.longitude
+	      };
+	      map.setCenter(pos);
+	    }, function() {
+	      handleLocationError(true,  map.getCenter());
+	    });
+	  }
+ 	 else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, map.getCenter());
+ 	 }
+
           
         //document.addEventListener('touchstart', handler, {passive: true});
         map.addListener('click', function(e) {
