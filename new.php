@@ -99,12 +99,12 @@
                         <div class="card" >
                             <div class="header text-center" >
                                 <h3 class="title">These Points are the Don't go zones</h4>
-                               <h4><li>Avoid the marked zones on the map.</li></h4>
-                                <h4 ><li>Please mark the unsafe zones you know on the map</li></h4>
-                                <h4><li>
+                               <h5 ><li>Avoid the marked zones on the map.</li></h5>
+                                <h5 ><li>Please mark the unsafe zones you know on the map</li></h5>
+                                <h5><li>
                                 Right Click to delete the previously marked zones</li>
-                                </h4>
-                                <h4><li>Help Others! Save Lives!</li></h4>
+                                </h5>
+                                <h5 ><li>Help Others! Save Lives!</li></h5>
                                 
                                 <br>
                             </div>
