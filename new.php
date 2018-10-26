@@ -30,7 +30,7 @@
     <meta charset="utf-8">
 
     <style type="text/css">body { 
-  background: url(f1.jpg)  no-repeat center;
+  background: url(fl.jpg)  no-repeat center;
   background-size: cover; 
   } 
 </style>
