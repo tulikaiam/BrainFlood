@@ -1,55 +1,77 @@
 
+
 <html>
   <head>
-    <title>Don't Go Zones</title>
+     
+     <title>Don't Go Zones</title>
+    
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+
+    <style type="text/css">body { 
+  background: url(f1.jpg)  no-repeat center;
+  background-size: cover; 
+  } 
+</style>
     <style>
+
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
  
-      #map {
-         position: fixed;
-        top:60px;
-        left:50px;
-        height: 90%;
-        width:60%;
+       #map {
+         margin-top: 0%;
+    margin-bottom: 1%;
+    margin-right: auto;
+    margin-left: auto;
+        height: 70%;
+        width: 70%;
       }
       #text{
-         position: fixed;
+         position: absolute;
         left:1000px;
         top:240px;
       }
       #help{
-         position: fixed;
+         position: absolute;
         left:1000px;
         top:280px;
       }
       #he{
-        position: fixed;
+        position:absolute;
         left:500px;
       }
       #ac{
-         position: fixed;
+         position: absolute;
         left:1000px;
         top:150px;
       }
       #del{
-         position: fixed;
+         position: absolute;
         left:1000px;
         top:200px;
       }
-       div.a {
-    text-align: center;
-     position: fixed;
-
-} 
-
-      div.c {
-         position: fixed;
-  
-} 
- 
+      
 
 
       /* Optional: Makes the sample page fill the window. */
@@ -64,15 +86,35 @@
 }
     </style>
   </head>
+ 
   <div id="he" >
   <h2 > These points are the Danger zones</h2>
 </div>
-  <body background="fl.jpg">
-    <div class="c" id="ac"><font face="verdana" size="4" color=#FFFFFF><b><li>The zones that are marked are not accessible</li></b></font></div>
-    
-    <div class="c" id="del"><font face="verdana" size="4" color=#FFFFFF ><b><li>The zones can be deleted with a right click</li></b></font></div>
-    <div class="c" id="text"><font face="verdana" size ="4" color=#FFFFFF><b><li>MARK the zones that you know are not accessible</li></b></font></div>
-    <div class ="c"id="help"><font face="verdana" size="4" color=#FFFFFF><b><li>HELP other people</li></b></font></div>
+
+  <body >
+    <div class="content" >
+            <div class="container-fluid" >
+                <div class="row" >
+                    <div class="col-md-8 col-md-offset-2" >
+                        <div class="card" >
+                            <div class="header text-center" >
+                                <h3 class="title">These Points are the Don't go zones</h4>
+                               <h5 >Avoid the marked zones on the map.</h5>
+                                <h5 >Please mark the unsafe zones you know on the map.</h5>
+                                
+                                <h5>
+                                Right Click to delete the previously marked zones
+                                </h5>
+                                <h5 >Help Others! Save Lives!</h5>
+                                
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     <div id="map"></div>
     <script>
 
@@ -89,6 +131,8 @@
           zoom:13,
           center: {lat: 13.1769, lng: 77.1237 }
         });
+
+
          infoWindow = new google.maps.InfoWindow;
           if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -117,6 +161,7 @@
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
          xhr=new XMLHttpRequest();
         fetchDetails()
         function fetchDetails()
