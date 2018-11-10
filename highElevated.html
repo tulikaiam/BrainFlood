@@ -59,7 +59,7 @@
                                 <h3 class="title">Are you looking for nearby high elevated area? </h4>
                                
                                 <h5 >Please mark yourself on the map.</h5>
-                                
+                                <h5>Or Enter your latitude and longitude values to know the nearby elevated region</h5>
                                 <h5>
                                 To keep yourself safe, please go to the nearby shown elevated region.
                                 </h5>
@@ -242,8 +242,12 @@ function getDetails(map,lat,lon)
       elevation = res[0]
       lat = res[1]
       lng = res[2]
+      var d=document.createElement("div");
+      d.innerHTML=elevation;
+      document.body.appendChild(d);
       
       placeMarker(map,lat,lng,elevation);
+
       //set window content
  
       
