@@ -215,7 +215,11 @@ var map = new google.maps.Map(document.getElementById('map'), {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-
+map.addListener('click', function(e) {
+          placeMarkerAndPanTo(e.latLng, map);
+          //console.log("testing123! ");
+          getElevation(map,e.latLng);
+        });
 
 
 
