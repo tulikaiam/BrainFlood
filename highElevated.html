@@ -72,6 +72,12 @@
 
             </div>
         </div>
+        <input type="text" id="lat" name="lat" >
+  <br>
+ 
+  <input type="text" id="lon" name="lon" >
+  <br><br>
+  <button onclick="getElevation_copy()">Click me</button> 
 	  
     <div id="map"></div>
     <script>
@@ -174,6 +180,41 @@
         xhr.send();    
         }
     }   
+
+function getElevation_copy(){
+var lat=document.getElementById("lat").value;
+var lon=document.getElementById("lon").value;
+console.log(lat);
+console.log(lon);
+xhr=new XMLHttpRequest();
+getDetails(map,lat,lon)
+function getDetails(map,lat,lon)
+{
+  xhr.onreadystatechange=function()
+  {
+    if(xhr.readyState==4 && xhr.status==200)
+    {
+      
+      resText=xhr.responseText;
+      res=JSON.parse(resText);
+      console.log(res[0],res[1],res[2]);
+      elevation = res[0]
+      lat = res[1]
+      lng = res[2]
+      placeMarker(map,lat,lng,elevation);
+      //set window content
+ 
+      
+    }
+}                   
+xhr.open("GET",'cors.php?locations='+lat+','+lon,true);
+xhr.send();    
+}
+} 
+
+
+
+
     
     function placeMarker(map,lat, lng, elevation)
     {
