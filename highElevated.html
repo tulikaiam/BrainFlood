@@ -182,6 +182,43 @@
     }   
 
 function getElevation_copy(){
+
+var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat: 13.1769, lng: 77.1237 }
+        });
+	      var infoWindow;
+        //getting location and setting it as centre of map
+          infoWindow = new google.maps.InfoWindow;
+          if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  }
+  else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+  infoWindow.open(map);
+}
+
+
+
+
 var lat=document.getElementById("lat").value;
 var lon=document.getElementById("lon").value;
 console.log(lat);
@@ -201,6 +238,7 @@ function getDetails(map,lat,lon)
       elevation = res[0]
       lat = res[1]
       lng = res[2]
+      
       placeMarker(map,lat,lng,elevation);
       //set window content
  
